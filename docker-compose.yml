@@ -1,0 +1,12 @@
+services:
+  mysql:
+    image: mysql:8.4
+    environment:
+      MYSQL_DATABASE: banking_system
+      MYSQL_USER: banking_app
+      MYSQL_PASSWORD: banking_app_password
+      MYSQL_ROOT_PASSWORD: root_password
+    ports: ["3306:3306"]
+    volumes: [banking_mysql_data:/var/lib/mysql]
+volumes:
+  banking_mysql_data:
